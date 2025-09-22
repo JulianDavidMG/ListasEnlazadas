@@ -10,3 +10,6 @@ Este programa implementa una **lista simplemente enlazada** en C que almacena la
    ```bash
    gcc listaenlazada.c -o listaenlazada1
    ./listaenlazada1
+
+## Salida esperada del programa
+a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> p -> q -> r -> s -> t -> u -> v -> w -> x -> y -> z -> NULL
