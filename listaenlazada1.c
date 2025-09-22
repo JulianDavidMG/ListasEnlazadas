@@ -1,14 +1,16 @@
+//Abecedario en una lista enlazada
+
 #include <stdio.h>
 #include <stdlib.h>
 
 // Definición de la estructura de un nodo de la lista
 struct Node{
-    int data; // Almacenará los datos del nodo (en este caso, un número entero)
+    char data; // Almacenará los datos del nodo (en este caso, un caracter)
     struct Node* next; // Apuntador al siguiente nodo en la lista
 };
 
 // Función para crear un nuevo nodo
-struct Node* createNode(int data){
+struct Node* createNode(char data){
     // Asignar memoria para un nuevo nodo
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     
@@ -30,23 +32,23 @@ void printlist(struct Node* head){
 
     // Recorremos la lista hasta llegar al final (NULL)
     while (temp != NULL){
-        printf("%d -> ", temp->data); // Imprimimos el valor del nodo actual
+        printf("%c -> ", temp->data); // Imprimimos el valor del nodo actual
         temp = temp->next; // Avanzamos al siguiente nodo
     }
     printf("NULL\n"); // Imprimimos NULL al final de la lista para indicar que es el fin
 }
 
 int main(){
-    // Crear el primer nodo con el valor 10
-    struct Node* head = createNode(10); 
+    // Crear el primer nodo con el valor a
+    struct Node* head = createNode('a'); 
 
     // Creamos un puntero que nos ayudará a recorrer la lista (empezando desde el primer nodo)
     struct Node* current = head; 
     
-    // Bucle para crear 999 nodos adicionales (en total 1000 nodos)
-    for (int i = 1; i < 1000; i++) {
-        // Creamos un nuevo nodo con el valor 10 + i (es decir, valores de 10 a 1009)
-        struct Node* newNode = createNode(10 + i); 
+    // Bucle para crear 26 nodos adicionales (en total 26 nodos)
+    for (int i = 1; i < 26; i++) {
+        // Creamos un nuevo nodo con el valor 'a' + i (es decir, valores de 'a' a 'z')
+        struct Node* newNode = createNode('a' + i); 
 
         // Enlazamos el nodo previo con el nuevo nodo
         current->next = newNode;
