@@ -37,4 +37,13 @@ int main(){
     first->next = second;
     second->next = third;
 
+    printlist(head);
+
+    free(head);
+    free(first);
+    free(second);
+    free(third);
+
+    return 0;
+
 };
