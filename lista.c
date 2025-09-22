@@ -10,7 +10,7 @@ struct Node* createNode(int data){
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     if (newNode == NULL){
         printf("Error: Memoria no reservada");
-        exist(1);
+        exit(1);
     }
 
     newNode->data = data;
